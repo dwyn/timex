@@ -1300,7 +1300,7 @@ defmodule Timex do
         end
       end
 
-    Module.eval_quoted(__MODULE__, month_quoted, [], __ENV__)
+    Code.eval_quoted(month_quoted, [], __ENV__)
   end)
 
   # Make an attempt at cleaning up the provided string
